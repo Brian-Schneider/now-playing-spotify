@@ -109,6 +109,9 @@ def loadImageB64(url):
 
 def makeSVG(data, background_color, border_color):
     
+    barCount = 84
+    contentBar = "".join(["<div class='bar'></div>" for _ in range(barCount)])
+    barCSS = barGen(barCount)
 
     if not "is_playing" in data:
         contentBar = "Hahaha" #Shows/Hides the EQ bar if no song is currently playing
